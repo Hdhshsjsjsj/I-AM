@@ -155,7 +155,7 @@ async def next_page(bot, query):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton('⚡ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡', url="t.me/LCULINKZ"), 'qinfo')
+            InlineKeyboardButton('⚡ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡', url="t.me/LCULINKZ")
         ]
     )
     btn.insert(1, 
@@ -988,7 +988,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
+            InlineKeyboardButton('⚡ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡', url="t.me/LCULINKZ")
         ]
     )
     btn.insert(1, 
