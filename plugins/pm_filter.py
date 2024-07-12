@@ -605,7 +605,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="t.me/cinemaworld_update")
                   ]]
         await query.message.edit_text(
-            text=script.START_TXT,
+            text=script.START_TXT,(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
     elif query.data == "help2":
