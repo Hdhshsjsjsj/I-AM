@@ -800,6 +800,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton ('Cᴏɴᴛᴀᴄᴛ', url="t.me/Leomessi_10_19")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto("https://telegra.ph/file/89de0d28af87a9f06751f.jpg")
+        )
         await query.message.edit_text(
             text=script.OWNER_INFO,
             reply_markup=reply_markup,
