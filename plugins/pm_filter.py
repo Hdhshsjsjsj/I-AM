@@ -591,6 +591,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "start":
+        buttons = [[
+            InlineKeyboardButton('⊗Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⊗', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],[
+                    InlineKeyboardButton('👑 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info"),
+                    InlineKeyboardButton('⊙ Sᴜᴘᴘᴏʀᴛ Lɪꜱᴛ', callback_data="group_info")
+                ],[
+                    InlineKeyboardButton('🛠 Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('⌂ Aʙᴏᴜᴛ', callback_data='about'),
+                    InlineKeyboardButton('Iɴʟɪɴᴇ Sᴇᴀʀᴄʜ ☌', switch_inline_query_current_chat='')
+                ],[
+                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="t.me/cinemaworld_update")
+                  ]]
+        await query.message.edit_text(
+            text=script.START_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
     elif query.data == "help2":
         buttons = [[
             InlineKeyboardButton('Mᴏʀᴇ Fᴇᴀᴛᴜʀᴇꜱ', callback_data='help')  
