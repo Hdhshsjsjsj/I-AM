@@ -632,7 +632,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         buttons = [[
              InlineKeyboardButton('sᴛɪᴄᴋɪᴅ', callback_data='sticker'),
-             InlineKeyboardButton('ᴛɢʀᴀᴘʜ', callback_data='tele')
+             InlineKeyboardButton('ᴛɢʀᴀᴘʜ', callback_data='tele'),
+            InlineKeyboardButton('𝚜𝚘𝚗𝚐', callback_data='song')
          ], [
             InlineKeyboardButton('↭ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ​↭', callback_data='help2')
          ]]
@@ -814,11 +815,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton("Bᴏᴛ Dᴀᴛᴀʙᴀꜱᴇ", url="https://t.me/Leomessi_10_19")
                   ],[
-            InlineKeyboardButton("Gʀᴏᴜᴘ", url="https://t.me/cinemaworld_123"),
-            InlineKeyboardButton("​Cʜᴀɴɴᴇʟ", url="t.me/cinemaworld_update")
+            InlineKeyboardButton("Gʀᴏᴜᴘ", url="https://t.me/LUCGROUP"),
+            InlineKeyboardButton("​Cʜᴀɴɴᴇʟ", url="t.me/LCULINKZ")
                   ],[
             InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/cinemaworld_123"),
-            InlineKeyboardButton("Uᴘᴅᴀᴛᴇꜱ", url="t.me/moviebot_channel")
+            InlineKeyboardButton("Uᴘᴅᴀᴛᴇꜱ", url="t.me/cinemaworld_update")
                   ],[
             InlineKeyboardButton("⇍Bᴀᴄᴋ", callback_data="start")
         ]]   
@@ -1046,15 +1047,13 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"""<b>🎬 {search} {year}
-{runtime} | {release_date}</b>
+        cap = f"""<b>🎪 ᴛɪᴛɪʟᴇ {search}
 
-<blockquote>⭐️ IMDB ➠ {rating}
-🌏 Country ➠ {countries}
-🔉 Language ➠ {languages}
-⚙️ Votes ➠ {votes}</blockquote>
+┏ 🤴 ᴀsᴋᴇᴅ ʙʏ : {message.from_user.mention}
+┣ ⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [𝐋𝐔𝐂𝐈𝐅𝐄𝐑](https://t.me/Luciferv99_bot)
+┗ 🍁 ᴄʜᴀɴɴᴇʟ : [𝐋𝐂𝐔](https://t.me/LCULINKZ)</b>
 
-<i>**®️ {message.chat.title}**</i>"""
+<i>®️ {message.chat.title}</i>"""
     if imdb and imdb.get('poster'):
         try:
             pic_fi=await message.reply_photo(photo=NOR_IMG, caption=cap[:1024],
